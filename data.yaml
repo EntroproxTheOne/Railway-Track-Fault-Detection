@@ -1,0 +1,13 @@
+path: C:\Users\masoo\OneDrive\Desktop\Projects_2025\ML Model Trains\Track Error Detection\data\dataset
+train: train
+val: valid
+test: test
+names:
+  0: track_crack
+  1: missing_bolt
+  2: ballast_issue
+  3: broken_sleeper
+  4: gauge_error
+  5: fishplate_issue
+  6: crushed_stone
+nc: 7

@@ -1,0 +1,66 @@
+# Track Error Detection - Model Configuration
+
+# Model
+model: 'yolov8n.pt'  # nano version for Pi optimization
+img_size: 640  # Reduced to 416 for Pi if needed
+batch_size: 16
+epochs: 100
+lr0: 0.001
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Data
+# Track error classes
+names:
+  0: 'track_crack'
+  1: 'missing_bolt'
+  2: 'ballast_issue'
+  3: 'broken_sleeper'
+  4: 'gauge_error'
+  4: 'fishplate_issue'
+  5: 'crushed_stone'
+
+# Severity levels (for classification)
+severity_mapping:
+  simple: ['missing_bolt', 'crushed_stone']
+  moderate: ['ballast_issue', 'fishplate_issue']
+  severe: ['track_crack', 'broken_sleeper', 'gauge_error']
+
+# Training paths
+train_dir: 'data/dataset/train'
+val_dir: 'data/dataset/valid'
+test_dir: 'data/dataset/test'
+
+# Output
+output_dir: 'models'
+checkpoint_dir: 'checkpoints'
+
+# Pi optimization
+pi_mode: False  # Set to True for Pi deployment optimizations
+pi_img_size: 416  # Smaller input for Pi
+pi_threads: 4  # CPU threads on Pi
+pi_confidence: 0.5  # Confidence threshold
+
+# Detection settings
+confidence_threshold: 0.45
+iou_threshold: 0.5
+max_detections: 100
+
+# Color mapping for severity levels (BGR for OpenCV)
+severity_colors:
+  simple: [0, 255, 0]      # Green
+  moderate: [0, 165, 255]  # Orange
+  severe: [0, 0, 255]      # Red
+
+# Camera settings (for real-time detection)
+camera:
+  device_id: 0
+  width: 1280
+  height: 720
+  fps: 30
+  flip: False
+

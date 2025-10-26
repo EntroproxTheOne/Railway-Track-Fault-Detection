@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model files (too large for git)
+*.pt
+*.onnx
+*.pth
+*.h5
+*.pb
+*.engine
+
+# Data files
+data/dataset/
+data/annotations/
+data/raw/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+
+# Output
+output/
+*.mp4
+*.avi
+checkpoints/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Training outputs
+runs/
+wandb/
+mlruns/
+models/track_error_model/
+
+# YOLO
+*.yaml.bak
+

@@ -1,0 +1,37 @@
+# Track Error Detection System
+# Python 3.11.x required
+
+# Core ML/AI Libraries
+ultralytics>=8.0.0  # YOLOv8 (works on Pi)
+torch>=2.0.0
+torchvision>=0.15.0
+tensorflow>=2.13.0  # For TensorFlow Lite conversion
+onnx>=1.14.0  # For ONNX export and runtime
+
+# Computer Vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+pillow>=10.0.0
+albumentations>=1.3.0  # Augmentation library
+
+# Data Handling
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
+scikit-learn>=1.3.0
+scikit-image>=0.21.0
+
+# For Pi Optimization (optional but recommended)
+# onnxruntime>=1.15.0  # Uncomment for Pi deployment
+# tflite-runtime  # Uncomment for TensorFlow Lite on Pi
+
+# Development
+pytest>=7.4.0
+black>=23.7.0
+jupyterlab>=4.0.0
+
