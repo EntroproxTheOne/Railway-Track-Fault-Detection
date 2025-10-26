@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icon.png" alt="Track Error Detection" width="200"/>
+</p>
+
 # 🚂 Track Error Detection System
 Real-time Railway Track Error Detection using YOLOv8 for Indian Railways
 
@@ -103,6 +107,29 @@ python training/train.py --model small
 - ONNX export for Pi: `models/track_error_model/weights/best.onnx`
 
 ### 4. Run Real-Time Detection
+
+#### **Option A: GUI Application (Recommended)**
+
+**Windows:**
+```bash
+# Double-click run_gui.bat
+# OR run in terminal:
+venv\Scripts\python.exe inference\detect_gui.py
+```
+
+**Linux/Mac:**
+```bash
+python inference/detect_gui.py
+```
+
+**Features:**
+- 🖥️ Modern graphical interface
+- 📊 Real-time FPS and detection stats
+- 🎨 Color-coded severity indicators
+- 🎛️ Camera selection and controls
+- ▶️ Start/Stop buttons
+
+#### **Option B: Command Line**
 
 ```bash
 # Basic detection

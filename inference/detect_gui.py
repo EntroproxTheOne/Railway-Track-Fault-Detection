@@ -11,6 +11,7 @@ import yaml
 from ultralytics import YOLO
 import threading
 import time
+import os
 
 class TrackDetectorGUI:
     def __init__(self, model_path='models/track_error_model/weights/best.pt'):
@@ -18,6 +19,15 @@ class TrackDetectorGUI:
         self.root.title("🚂 Track Error Detection System")
         self.root.geometry("1280x800")
         self.root.configure(bg='#2b2b2b')
+        
+        # Set window icon
+        try:
+            icon_path = 'icon.png'
+            if os.path.exists(icon_path):
+                icon = tk.PhotoImage(file=icon_path)
+                self.root.iconphoto(True, icon)
+        except Exception as e:
+            print(f"Could not load icon: {e}")
         
         # Load model
         print("Loading model...")
